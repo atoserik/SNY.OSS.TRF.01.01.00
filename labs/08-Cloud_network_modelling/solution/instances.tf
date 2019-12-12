@@ -2,7 +2,7 @@
 
 // Web server instance
 resource "google_compute_instance" "webserver" {
- name         = "fe-${random_id.random_id.hex}"
+ name         = "erik-fe-${random_id.random_id.hex}"
  machine_type = "f1-micro"
  zone         = "${var.REGION}-${var.ZONE}"
  tags          = ["ssh","http"]
@@ -78,7 +78,7 @@ output "webserver-ip" {
 
 // App server instance
 resource "google_compute_instance" "appserver" {
- name         = "be-${random_id.random_id.hex}"
+ name         = "erik-be-${random_id.random_id.hex}"
  machine_type = "f1-micro"
  zone         = "${var.REGION}-${var.ZONE}"
  /*tags          = ["ssh","http"]*/
@@ -145,7 +145,7 @@ provisioner "remote-exec" {
 
  boot_disk {
    initialize_params {
-    image = "${lookup(var.IMAGE,"${var.REGION}-${var.ZONE}")}"
+     image = "${lookup(var.IMAGE,"${var.REGION}-${var.ZONE}")}"
    }
  }
 
