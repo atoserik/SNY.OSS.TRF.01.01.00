@@ -1,5 +1,5 @@
 resource "google_compute_disk" "disk1" {
-  name  = "test-disk"
+  name  = "erik-test-disk"
   type  = "pd-ssd"
   zone  = "${var.REGION}"
   labels = {
