@@ -4,8 +4,8 @@ resource "random_id" "instance_id" {
 }
 
 // A single Google Cloud Engine instance
-resource "google_compute_instance" "default" {
- name         = "my-vm-${random_id.instance_id.hex}"
+resource "google_compute_instance" "erik_default" {
+ name         = "erik-vm-${random_id.instance_id.hex}"
  machine_type = "f1-micro"
  zone         = "${var.REGION}"
 
@@ -24,7 +24,7 @@ resource "google_compute_instance" "default" {
  }
 
   metadata = {
-   ssh-keys = "${var.VM_USERNAME}:${file("~/.ssh/id_rsa.pub")}"
+   ssh-keys = "${var.VM_USERNAME}:${file("${var.ID_RSA_PUB_FILE}")}"
  }
 
 

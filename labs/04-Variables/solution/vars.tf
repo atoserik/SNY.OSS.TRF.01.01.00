@@ -1,3 +1,4 @@
+variable "ID_RSA_PUB_FILE" {}
 variable "CREDENTIAL_FILE" {}
 variable "VM_USERNAME" {}
 variable "PROJECT_ID" {}

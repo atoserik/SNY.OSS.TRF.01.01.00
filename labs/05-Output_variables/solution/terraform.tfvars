@@ -1,4 +1,5 @@
-CREDENTIAL_FILE="/home/vagrant/SNY-OSS-TRF-01-01-00-870577b1e676.json"
+CREDENTIAL_FILE="C:/profili/U357314/Documents/Software/Terraform/Lab/SNY.OSS.TRF.01.01.00/SNY-OSS-TRF-01-01-00-870577b1e676.json"
 PROJECT_ID="sny-oss-trf-01-01-00"
 REGION="us-west1-a"
-VM_USERNAME="denis_maggiorotto"
+VM_USERNAME="erik"
+ID_RSA_PUB_FILE="C:/Users/U357314/.ssh/id_rsa.pub"

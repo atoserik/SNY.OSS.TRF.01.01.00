@@ -1,6 +1,8 @@
+//Credential: credentials = "${file("C:\profili\U357314\Documents\Software\Terraform\Lab\SNY.OSS.TRF.01.01.00\SNY-OSS-TRF-01-01-00-870577b1e676.json")}"
+
 // Configure the Google Cloud provider
 provider "google" {
- credentials = "${file("/home/vagrant/SNY-OSS-TRF-01-01-00-870577b1e676.json")}"
+ credentials = "${file("C:/profili/U357314/Documents/Software/Terraform/Lab/SNY.OSS.TRF.01.01.00/SNY-OSS-TRF-01-01-00-870577b1e676.json")}"
  project     = "sny-oss-trf-01-01-00"
  region      = "us-west1-a"
 }
@@ -11,8 +13,8 @@ resource "random_id" "instance_id" {
 }
 
 // A single Google Cloud Engine instance
-resource "google_compute_instance" "default" {
- name         = "my-vm-${random_id.instance_id.hex}"
+resource "google_compute_instance" "erikdefault" {
+ name         = "erik-vm-${random_id.instance_id.hex}"
  machine_type = "f1-micro"
  zone         = "us-west1-a"
 
