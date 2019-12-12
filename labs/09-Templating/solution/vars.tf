@@ -9,16 +9,16 @@ variable "ZONE" {
     default="a"
 }
 variable "VPC_NAME" {
-     default="test-vpc"
+     default="erik-vpc"
 }
 variable "PUBLIC_SUBNET_CDIR" {
-    default="10.26.1.0/24"
+    default="10.28.1.0/24"
 }
 variable "PRIVATE_SUBNET_CDIR" {
-    default="10.26.2.0/24"
+    default="10.28.2.0/24"
 }
 variable "APPSERVERS_COUNT" {
-    default="3"
+    default="1"
 }
 
 variable "IMAGE" {
